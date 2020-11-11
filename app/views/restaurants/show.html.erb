@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="card bg-white p-3 mt-3 $border-radius">
+      <div class="card-infos d-flex justify-content-between pr-3">
+        <h2><%= link_to @restaurant.name, restaurant_path(@restaurant) %></h2>
+        <p href="#" class="m-0 py-1 px-2 rounded-pill bg-info "><%= @restaurant.category%></p>
+      </div>
+      <p class="my-2"> <%= @restaurant.address%> </p>
+      <div class="d-flex align-items-center my-2">
+        <i class="fa fa-phone mx-2"></i>
+        <p class="m-0"> <%= @restaurant.phone_number%> </p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<%= link_to "Back to all restaurants", restaurants_path, class: "btn btn-primary $border-radius"%>

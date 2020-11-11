@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <ul class="list-group">
+    <% @restaurants.each do |restaurant| %>
+      <li class="list-group-item  border-bottom">
+        <h2 class = "m-0"><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+<!--         <p class="my-1"> <%= restaurant.address%> </p>
+        <div class="d-flex align-items-center">
+          <i class="fa fa-phone mx-2"></i>
+          <p class="m-0"> <%= restaurant.phone_number%> </p>
+        </div> -->
+      </li>
+    </ul>
+    <% end %>
+  </div>
+  <hr>
+</div>
+
