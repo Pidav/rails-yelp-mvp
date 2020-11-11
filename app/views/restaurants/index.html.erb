@@ -6,15 +6,6 @@
         <li class="list-group-item  border-bottom d-flex justify-content-between p-3 align-items-center">
           <h2 class= "m-0"><%= link_to restaurant.name, restaurant_path(restaurant), class: "m-0" %></h2>
           <%= render "infos_short", restaurant: restaurant, reviews: @reviews %>
-<!--           <div class="infos-short d-flex justify-content-end">
-            <% if @reviews.length > 0 %>
-              <div class="d-flex align-items-center mr-2">
-                <i class="fa fa-star mr-2"></i>
-                <p class="m-0"> <%= (@reviews.sum(:rating) / @reviews.length.to_f).round(1) %> </p>
-              </div>
-            <% end %>
-            <p class="m-0 py-1 px-2 rounded-pill bg-info "><%= restaurant.category%></p>
-          </div> -->
         </li>
       <% end %>
     </ul>
