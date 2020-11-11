@@ -6,6 +6,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+    @reviews = @restaurant.reviews
   end
 
   def new
@@ -21,18 +22,18 @@ class RestaurantsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  # def edit
+  # end
 
-  def update
-    @restaurant.update(restaurant_params)
-    redirect_to restaurant_path(@restaurant)
-  end
+  # def update
+  #   @restaurant.update(restaurant_params)
+  #   redirect_to restaurant_path(@restaurant)
+  # end
 
-  def destroy
-    @restaurant.destroy
-    redirect_to restaurants_path
-  end
+  # def destroy
+  #   @restaurant.destroy
+  #   redirect_to restaurants_path
+  # end
 
   private
   def restaurant_params
